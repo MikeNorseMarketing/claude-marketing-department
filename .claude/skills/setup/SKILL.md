@@ -110,9 +110,12 @@ Write the file right after its block, before starting the next block.
 3. **Delete every "Example:" line and example block.** The examples are from a made-up company. If one is left
    in, other skills will treat it as a fact about this business.
 4. Anything the user did not know becomes `[Not known yet]`. Never guess.
-5. Write the content in the business's language from Block 1, except the headings, which stay as they are.
-6. Set the frontmatter to `status: draft` and `last_updated:` today's date (YYYY-MM-DD).
-7. Tell the user in one line that the file is saved, then move to the next block.
+5. Write only what the user told you, or what their website says. You may tidy the wording, but do not add
+   rules, policies, claims, reasons, calls to action or explanations they did not give. The fixed rules in
+   `06_RULES.md` are the only exception, and they stay as they are.
+6. Write the content in the business's language from Block 1, except the headings, which stay as they are.
+7. Set the frontmatter to `status: draft` and `last_updated:` today's date (YYYY-MM-DD).
+8. Tell the user in one line that the file is saved, then move to the next block.
 
 ## Finish
 
@@ -131,5 +134,8 @@ Write the file right after its block, before starting the next block.
 ## Rules for this skill
 
 - Never invent a fact, number, quote, or name. Gaps stay as `[Not known yet]`.
+- Point out gaps, never forecast results. Say "a guarantee would give the copy more to work with", not
+  "a guarantee would lift conversion a lot".
+- Write plainly in your messages too: "20 to 30 minutes", not "20–30", and no em dashes.
 - Never overwrite a file that has `status: confirmed` without asking first.
 - Keep it moving. If the user seems tired, offer to stop and say `/setup continue` picks up where they left off.
