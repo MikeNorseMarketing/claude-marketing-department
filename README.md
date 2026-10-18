@@ -10,61 +10,44 @@ Made by Mike Haugen at Norse Marketing. Watch the full walkthrough on YouTube:
 ## What you need
 
 - A paid Claude plan (Pro or Max). The free plan does not include Claude Code.
-- Claude Code. Claude Code installs everything else for you.
+- The Claude desktop app. It has Claude Code built in, so there is no terminal and nothing else to install.
 
 ## Setup
 
-**1. Open your terminal.**
-Mac: press `Cmd` and `Space`, type Terminal, press Enter.
-Windows: press the Windows key, type PowerShell, press Enter.
+**1. Get the Claude app.** Go to [claude.com/download](https://claude.com/download).
+Mac: open the file and drag Claude into Applications. Windows: run the installer.
+Open Claude and sign in.
 
-**2. Install Claude Code.** Paste one line:
+**2. Download this repo.** On this page, click the green **Code** button, then **Download ZIP**.
+Unzip it. You get a folder called `claude-marketing-department-main`. Move it somewhere you'll find it, like
+your Desktop.
 
-```bash
-# Mac
-curl -fsSL https://claude.ai/install.sh | bash
-```
+**3. Open the folder in Claude.** In the Claude app, click **Code** at the top, choose **Local**, click
+**Select folder**, and pick `claude-marketing-department-main`.
 
-```powershell
-# Windows (PowerShell)
-irm https://claude.ai/install.ps1 | iex
-```
-
-When it's done, close the terminal and open a new one.
-
-**3. Start Claude and log in.**
-
-```bash
-claude
-```
-
-The first time, your browser opens so you can log in with your Claude account.
-
-**4. Let Claude do the rest.** Paste this prompt into Claude Code:
-
-```text
-Install Git if I don't have it. Then download github.com/MikeNorseMarketing/claude-marketing-department to my Desktop, and tell me the exact command to open Claude Code in that folder.
-```
-
-Claude asks before it runs anything. Say yes. On a Mac you may get a popup to install developer tools,
-click Install. On Windows you may be asked for permission, click Yes.
-
-**5. Open the folder and run setup.** Type `/exit`, paste the command Claude gave you, then type:
+**4. Run setup.** Type this in the message box and press Enter:
 
 ```text
 /setup
 ```
 
-Setup interviews you about your business (about 20 to 30 minutes) and writes your business files.
-You can stop any time and continue later with `/setup continue`.
+Setup interviews you about your business (about 20 to 30 minutes) and writes your business files. You can stop
+any time and continue later with `/setup continue`.
 
-Already use Git? This does the same thing:
+Tip: set the mode next to the send button to **Accept edits**, so Claude can save the files without asking every
+time.
+
+### Prefer the terminal?
+
+Install Claude Code ([instructions](https://code.claude.com/docs/en/setup)), then:
 
 ```bash
 git clone https://github.com/MikeNorseMarketing/claude-marketing-department.git
 cd claude-marketing-department
 claude
 ```
+
+Then type `/setup`.
 
 ## What's inside
 
@@ -136,12 +119,13 @@ time."
 **Where does my data go?** The files stay in the folder on your computer. Claude reads what it needs to do the
 job. Don't put customers' personal data in the business files.
 
-**Does it work on Windows?** Yes. Use PowerShell for the commands above.
+**Does it work on Windows?** Yes, the Claude app works the same on Mac and Windows.
 
-**Something doesn't work.** Type `claude doctor` in the terminal, or paste the error into Claude.
+**Something doesn't work.** Take a screenshot of the error and paste it into Claude. It usually tells you what to
+fix.
 
-**How do I get updates?** Ask Claude: "Update this folder from GitHub." Your business files and output stay
-as they are.
+**How do I get updates?** Download the new ZIP and copy your `business/` and `output/` folders into it. If you
+used `git clone`, ask Claude: "Update this folder from GitHub."
 
 ## License
 
